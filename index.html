@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI × Python | Grade 8 Learning World</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--ink:#172033;--muted:#667085;--bg:#f7f8fc;--card:#fff;--p:#5b5bd6;--p2:#8b5cf6;--cyan:#0891b2;--green:#15803d;--orange:#d97706;--red:#dc2626;--line:#e6e8ef}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}.top{background:linear-gradient(135deg,#4338ca,#7c3aed 55%,#0891b2);color:#fff;min-height:510px;padding:22px 6% 70px;position:relative;overflow:hidden}
+.top:after{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#fff2;right:-160px;top:-220px}
+.nav{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}.brand{font-weight:900;font-size:20px}.navlinks{display:flex;gap:7px;flex-wrap:wrap}.navlinks a{padding:8px 11px;border-radius:9px;font-size:14px}.navlinks a:hover{background:#ffffff22}
+.hero{max-width:1180px;margin:70px auto 0;position:relative;z-index:2}.eyebrow{font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;opacity:.85}.hero h1{font-size:clamp(40px,7vw,76px);line-height:1.02;margin:12px 0}.hero p{font-size:20px;max-width:720px;color:#eef2ff}.chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.chip{padding:8px 13px;border:1px solid #ffffff42;background:#ffffff18;border-radius:99px}
+.wrap{max-width:1180px;margin:auto;padding:30px 18px 80px}.section{margin:48px 0;scroll-margin-top:80px}.sectionhead{display:flex;gap:14px;align-items:center;margin-bottom:20px}.icon{width:45px;height:45px;border-radius:14px;background:#e9e7ff;display:grid;place-items:center;font-size:22px}.section h2{font-size:34px;margin:0}.sub{color:var(--muted);margin:2px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:17px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:21px;box-shadow:0 10px 30px #16213d0b}.card h3{margin:0 0 8px}.card p:last-child{margin-bottom:0}.accent{border-top:5px solid var(--p)}.green{border-top:5px solid var(--green)}.orange{border-top:5px solid var(--orange)}.cyan{border-top:5px solid var(--cyan)}
+.callout{padding:17px;border-radius:15px;background:#eef2ff;border-left:5px solid var(--p);margin:17px 0}.memory{background:#fff9df;border:1px solid #f1dc89;padding:15px;border-radius:15px;margin:17px 0}.tip{background:#ecfdf3;border-left-color:var(--green)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line)}th{background:#f1f3f8}tr:last-child td{border-bottom:0}
+pre{background:#101522;color:#e9efff;padding:18px;border-radius:14px;overflow:auto;font:14px/1.6 Consolas,monospace}.kw{color:#c4b5fd}.str{color:#86efac}.num{color:#93c5fd}
+.lesson{display:none}.lesson.active{display:block}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tab{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}.tab.active{background:var(--p);color:#fff;border-color:var(--p)}
+.quizq{background:#fff;border:1px solid var(--line);padding:18px;border-radius:15px;margin:12px 0}.opts button{padding:9px 12px;margin:5px;border:1px solid #d1d5db;background:#fff;border-radius:9px;cursor:pointer}.opts button:hover{background:#eef2ff}.result{font-weight:800;margin-top:8px}.good{color:var(--green)}.bad{color:var(--red)}
+.search{display:flex;gap:9px;margin:15px 0}.search input{flex:1;padding:13px;border:1px solid #cbd5e1;border-radius:11px;font-size:16px}.btn{background:var(--p);color:#fff;border:0;padding:12px 17px;border-radius:11px;cursor:pointer;font-weight:700}.btn.secondary{background:#eef2ff;color:var(--p)}
+.flash{display:grid;place-items:center;min-height:150px;text-align:center;cursor:pointer}.flash small{color:var(--muted)}.hidden{display:none}
+.progress{position:fixed;right:16px;bottom:16px;width:190px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:0 12px 35px #0002;z-index:20}.track{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden}.track i{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--p),var(--cyan));transition:.3s}
+footer{background:#101522;color:#cbd5e1;text-align:center;padding:35px 18px}
+@media(max-width:700px){.nav{align-items:flex-start;gap:10px;flex-direction:column}.hero{margin-top:45px}.progress{width:150px}.section h2{font-size:28px}}
+</style>
+</head>
+<body>
+<header class="top" id="home">
+<nav class="nav"><div class="brand">🤖 AI × 🐍 PYTHON</div><div class="navlinks">
+<a href="#ethics">Ethics</a><a href="#domains">AI</a><a href="#sustainability">Sustainability</a><a href="#systems">Systems</a><a href="#python">Python</a><a href="#lab">Lab</a><a href="#quiz">Quiz</a>
+</div></nav>
+<div class="hero">
+<div class="eyebrow">Grade 8 • Revision World</div>
+<h1>Learn. Think. Code.</h1>
+<p>A complete, kid-friendly revision website for everything taught so far — from AI Ethics and the three AI domains to Python basics, conditions, largest and smallest number programs.</p>
+<div class="chips"><span class="chip">⚖️ AI Ethics</span><span class="chip">👁️ Computer Vision</span><span class="chip">💬 NLP</span><span class="chip">📊 Statistical Data</span><span class="chip">🌱 Sustainability</span><span class="chip">🧠 Systems Thinking</span><span class="chip">🐍 Python</span></div>
+</div>
+</header>
+
+<main class="wrap">
+<section class="section" id="start">
+<div class="sectionhead"><div class="icon">🗺️</div><div><h2>Learning Map</h2><p class="sub">Follow the path from AI ideas to Python programs.</p></div></div>
+<div class="grid">
+<div class="card accent"><h3>1. AI Ethics</h3><p>Right/wrong, fair/unfair, bias, privacy, jobs and misinformation.</p></div>
+<div class="card cyan"><h3>2. AI Domains</h3><p>Computer Vision, NLP and Statistical Data.</p></div>
+<div class="card green"><h3>3. Sustainability</h3><p>Resources, society, SDGs and responsible technology.</p></div>
+<div class="card orange"><h3>4. Systems Thinking</h3><p>Connected parts and how they affect one another.</p></div>
+<div class="card accent"><h3>5. Python</h3><p>Code screen, output, print, variables and arithmetic.</p></div>
+<div class="card cyan"><h3>6. Conditions</h3><p>if, else, elif, comparisons, indentation and simple programs.</p></div>
+</div>
+</section>
+
+<section class="section" id="ethics">
+<div class="sectionhead"><div class="icon">⚖️</div><div><h2>AI Ethics</h2><p class="sub">Using AI responsibly, fairly and safely.</p></div></div>
+<div class="card">
+<h3>What is Ethics?</h3><p>Ethics means principles that help us decide what is <b>right or wrong</b> and <b>fair or unfair</b>.</p>
+<h3>What is AI Ethics?</h3><p>AI Ethics means developing and using AI in a <b>responsible, fair and safe</b> way.</p>
+<div class="grid">
+<div class="card accent"><h3>⚖️ AI Bias</h3><p>Unfair AI results can happen when data or human assumptions are biased.</p><p><b>Example:</b> A scholarship AI should not unfairly favour boys or girls.</p></div>
+<div class="card cyan"><h3>🔒 Privacy</h3><p>Personal information should be protected.</p><p><b>Example:</b> A school AI app should keep names, marks and photos safe.</p></div>
+<div class="card orange"><h3>💼 Job Replacement</h3><p>AI and automation can change the tasks people do. Responsible use considers people and technology together.</p></div>
+<div class="card green"><h3>📰 Misinformation</h3><p>AI can produce incorrect information. Check information before believing or sharing it.</p></div>
+</div>
+<h3>Four qualities of ethical AI</h3>
+<table><tr><th>Quality</th><th>Meaning</th><th>Kid example</th></tr>
+<tr><td>Human-centric</td><td>People first</td><td>AI helps a student understand difficult Maths.</td></tr>
+<tr><td>Unbiased</td><td>Treat people fairly</td><td>Scholarship AI judges students fairly.</td></tr>
+<tr><td>Data-protective</td><td>Keep personal data safe</td><td>Student information is not shared without permission.</td></tr>
+<tr><td>Sustainable</td><td>Use resources responsibly</td><td>AI uses computing resources carefully.</td></tr></table>
+<div class="memory"><b>Memory line:</b> 👥 People first • ⚖️ Fair • 🔒 Protect data • 🌱 Use resources responsibly</div>
+<h3>Everyday bias examples</h3><p>Virtual assistants have historically often used female voices, which can be used to discuss assumptions about gender. Search results for “salon” can also reflect patterns or assumptions present in data and society.</p>
+</div></section>
+
+<section class="section" id="domains">
+<div class="sectionhead"><div class="icon">🤖</div><div><h2>Three AI Domains</h2><p class="sub">Use the memory trick: SEE • LANGUAGE • NUMBERS.</p></div></div>
+<div class="grid">
+<div class="card accent"><h3>👁️ Computer Vision</h3><p>AI that sees and understands images and videos.</p><p><b>Examples:</b> Face Unlock, object detection, medical images.</p><div class="memory"><b>SEE → Computer Vision</b></div></div>
+<div class="card cyan"><h3>💬 Natural Language Processing</h3><p>AI that understands or works with human language.</p><p><b>Examples:</b> Siri/Alexa, chatbots, translation.</p><div class="memory"><b>LANGUAGE → NLP</b></div></div>
+<div class="card green"><h3>📊 Statistical Data</h3><p>AI that works with numbers and data to find patterns and make predictions.</p><p><b>Examples:</b> weather prediction, temperature/rainfall data, sales data.</p><div class="memory"><b>NUMBERS → Statistical Data</b></div></div>
+</div>
+</section>
+
+<section class="section" id="sustainability">
+<div class="sectionhead"><div class="icon">🌱</div><div><h2>Sustainability & SDGs</h2><p class="sub">Think about today and the future.</p></div></div>
+<div class="grid">
+<div class="card green"><h3>🌱 Sustainability</h3><p>Use resources carefully so future generations can use them too.</p><ul><li>Save water</li><li>Save electricity</li><li>Don't waste food</li><li>Protect trees</li><li>Reduce pollution</li></ul></div>
+<div class="card cyan"><h3>👨‍👩‍👧‍👦 Society</h3><p>Sustainability needs everyone's participation. One person alone cannot solve every resource problem.</p></div>
+<div class="card accent"><h3>🎯 SDGs</h3><p>SDGs are the <b>17 Sustainable Development Goals</b> created by the United Nations for sustainable development.</p></div>
+</div>
+</section>
+
+<section class="section" id="systems">
+<div class="sectionhead"><div class="icon">🧠</div><div><h2>Systems Thinking</h2><p class="sub">Look at the whole system, not only one part.</p></div></div>
+<div class="card">
+<h3>What is a system?</h3><p>A system is a group of connected parts that work together.</p>
+<h3>Interconnectedness</h3><p>Interconnectedness means that parts of a system can affect one another.</p>
+<div class="grid">
+<div class="card"><h3>💧 Water cycle</h3><p>Its stages are connected.</p></div><div class="card"><h3>🏫 School</h3><p>Students, teachers, rooms and resources are connected.</p></div><div class="card"><h3>🍎 Food chain</h3><p>A change in one part can affect others.</p></div><div class="card"><h3>🚦 Traffic</h3><p>Vehicles, roads, signals and people affect one another.</p></div>
+</div>
+<div class="memory"><b>Remember:</b> System = connected parts. Systems thinking = understand the connections.</div>
+</div>
+</section>
+
+<section class="section" id="project">
+<div class="sectionhead"><div class="icon">🎈</div><div><h2>Project & Debate Recall</h2><p class="sub">The big ideas from the AI presentation and Balloon Debate.</p></div></div>
+<div class="grid">
+<div class="card"><h3>AI Presentation</h3><ul><li>AI definition</li><li>Human intelligence vs AI</li><li>Automation vs AI</li><li>Applications of AI</li><li>Three AI domains</li><li>Sustainability</li><li>SDGs</li><li>Systems thinking</li></ul></div>
+<div class="card"><h3>Balloon Debate</h3><p>Teams can discuss both sides of an AI topic and support their points with reasons.</p><p><b>Possible topics:</b> AI in education, healthcare, jobs, transport and entertainment.</p><p><b>Think:</b> How can AI affect jobs, healthcare, learning opportunities and income?</p></div>
+</div>
+</section>
+
+<section class="section" id="python">
+<div class="sectionhead"><div class="icon">🐍</div><div><h2>Python World</h2><p class="sub">Start from zero and build one idea at a time.</p></div></div>
+<div class="tabs">
+<button class="tab active" onclick="showLesson(0,this)">Python Basics</button>
+<button class="tab" onclick="showLesson(1,this)">Conditions</button>
+<button class="tab" onclick="showLesson(2,this)">Programs</button>
+</div>
+<div class="lesson active card">
+<h3>💻 Code screen & output screen</h3><div class="grid"><div class="card"><b>Code screen</b><p>Where we type the Python program.</p></div><div class="card"><b>Output screen</b><p>Where we see the result after running.</p></div></div>
+<div class="callout"><b>Flow:</b> ⌨️ Type → ▶️ Run → 📺 Output</div>
+<h3>print()</h3><pre><code>print("Hello")
+print(10)</code></pre><p><b>print()</b> displays information.</p>
+<h3>Variables</h3><pre><code>a = 20
+b = 15</code></pre><p>A variable stores a value.</p>
+<h3>Arithmetic</h3><table><tr><th>+</th><td>Addition</td><th>-</th><td>Subtraction</td></tr><tr><th>*</th><td>Multiplication</td><th>/</th><td>Division</td></tr></table>
+<pre><code>a = 20
+b = 15
+print(a + b)</code></pre>
+<div class="callout"><b>Python rules:</b> case-sensitive • spelling matters • text uses quotation marks • brackets must close • indentation matters.</div>
+</div>
+<div class="lesson card">
+<h3>Conditional statements</h3><p>A condition is a question whose answer can be True or False.</p>
+<div class="memory"><b>IF = “If this is true, do this.”</b></div>
+<pre><code>age = 15
+
+if age >= 13:
+    print("You are a teenager")</code></pre>
+<h3>Indentation</h3><p>The indented line belongs to the <code>if</code>.</p>
+<h3>if + else</h3><pre><code>a = 20
+b = 15
+
+if a > b:
+    print("A is larger")
+else:
+    print("B is larger")</code></pre>
+<h3>if + elif + else</h3><pre><code>marks = 75
+
+if marks >= 90:
+    print("Excellent")
+elif marks >= 60:
+    print("Good")
+else:
+    print("Keep practising")</code></pre>
+</div>
+<div class="lesson card">
+<h3>Comparison operators</h3><table><tr><th>Symbol</th><th>Meaning</th></tr><tr><td>&gt;</td><td>Greater than</td></tr><tr><td>&lt;</td><td>Less than</td></tr><tr><td>==</td><td>Equal to</td></tr><tr><td>!=</td><td>Not equal to</td></tr><tr><td>&gt;=</td><td>Greater than or equal to</td></tr><tr><td>&lt;=</td><td>Less than or equal to</td></tr></table>
+<div class="callout"><b>Important:</b> <code>=</code> stores/assigns. <code>==</code> compares.</div>
+<h3>Largest of 2</h3><pre><code>a = 20
+b = 15
+
+if a > b:
+    print("A is larger")
+else:
+    print("B is larger")</code></pre>
+<h3>Smallest of 3</h3><pre><code>a = 12
+b = 8
+c = 20
+
+if a &lt; b and a &lt; c:
+    print("A is smallest")
+elif b &lt; a and b &lt; c:
+    print("B is smallest")
+else:
+    print("C is smallest")</code></pre>
+<p><b>and</b> means both conditions must be true.</p>
+</div>
+</section>
+
+<section class="section" id="lab">
+<div class="sectionhead"><div class="icon">🧪</div><div><h2>Interactive Coding Lab</h2><p class="sub">Change the values and predict the answer.</p></div></div>
+<div class="card">
+<h3>Largest of 2 — Try it!</h3>
+<div class="grid">
+<label>First number<br><input id="a" type="number" value="20" style="padding:11px;border:1px solid #cbd5e1;border-radius:9px;width:100%"></label>
+<label>Second number<br><input id="b" type="number" value="15" style="padding:11px;border:1px solid #cbd5e1;border-radius:9px;width:100%"></label>
+</div>
+<br><button class="btn" onclick="largest()">Run Program ▶</button>
+<pre id="labout">Output will appear here...</pre>
+<h3>Smallest of 3 — Try it!</h3>
+<div class="grid"><label>A<br><input id="s1" type="number" value="12" style="padding:11px;border:1px solid #cbd5e1;border-radius:9px;width:100%"></label><label>B<br><input id="s2" type="number" value="8" style="padding:11px;border:1px solid #cbd5e1;border-radius:9px;width:100%"></label><label>C<br><input id="s3" type="number" value="20" style="padding:11px;border:1px solid #cbd5e1;border-radius:9px;width:100%"></label></div><br>
+<button class="btn" onclick="smallest()">Run Program ▶</button><pre id="smallout">Output will appear here...</pre>
+</div>
+</section>
+
+<section class="section" id="quiz">
+<div class="sectionhead"><div class="icon">🎯</div><div><h2>Revision Quiz</h2><p class="sub">Answer first. Then check.</p></div></div>
+<div class="card" id="quizBox"></div>
+</section>
+</main>
+
+<div class="progress"><b>Revision progress</b><div class="track"><i id="bar"></i></div><small id="pt">0% explored</small></div>
+<footer><p>🤖 AI × 🐍 Python — Grade 8 Learning World</p><p>Learn • Think • Predict • Code • Practise</p></footer>
+
+<script>
+function showLesson(n,btn){document.querySelectorAll('.lesson').forEach((x,i)=>x.classList.toggle('active',i===n));document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));btn.classList.add('active')}
+function largest(){let a=+document.getElementById('a').value,b=+document.getElementById('b').value;document.getElementById('labout').textContent=a>b?'A is larger':b>a?'B is larger':'Both are equal'}
+function smallest(){let a=+s1.value,b=+s2.value,c=+s3.value;document.getElementById('smallout').textContent=(a<b&&a<c)?'A is smallest':(b<a&&b<c)?'B is smallest':(c<a&&c<b)?'C is smallest':'There is a tie'}
+const qs=[
+["Which AI domain works with images and videos?",["NLP","Computer Vision","Statistical Data"],1],
+["What does AI bias mean?",["Unfair AI results","Saving electricity","Printing code"],0],
+["Which is data-protective?",["Sharing marks publicly","Keeping student information safe","Using more electricity"],1],
+["What does SEE → mean?",["NLP","Computer Vision","Statistical Data"],1],
+["What does NLP work with?",["Human language","Only roads","Only electricity"],0],
+["What does sustainability mean?",["Use resources carefully for the future","Use as much as possible","Ignore resources"],0],
+["What does print() do?",["Displays information","Stores a value","Compares values"],0],
+["What does = do?",["Compare","Store/assign","Mean greater than"],1],
+["What does == do?",["Compare equality","Store a value","Print"],0],
+["What does elif mean?",["End the program","Check another condition","Store a number"],1],
+["What does indentation show?",["Which code belongs to the condition","The program is deleted","The number is larger"],0],
+["What does and mean?",["Both conditions must be true","One condition only","No condition"],0],
+["For 12, 8, 20, which is smallest?",["12","8","20"],1]
+];
+let score=0,answered=0;const qb=document.getElementById('quizBox');
+qs.forEach((q,i)=>{let d=document.createElement('div');d.className='quizq';d.innerHTML=`<b>${i+1}. ${q[0]}</b><div class="opts"></div><div class="result"></div>`;let o=d.querySelector('.opts');q[1].forEach((v,j)=>{let b=document.createElement('button');b.textContent=v;b.onclick=()=>{if(d.dataset.done)return;d.dataset.done=1;answered++;let r=d.querySelector('.result');if(j===q[2]){score++;r.textContent='✅ Correct!';r.className='result good'}else{r.textContent='❌ Check the notes and try the next one.';r.className='result bad'}if(answered===qs.length)qb.insertAdjacentHTML('beforeend',`<div class="callout tip">🎉 Final score: ${score}/${qs.length}</div>`)};o.appendChild(b)});qb.appendChild(d)});
+const secs=[...document.querySelectorAll('.section')],seen=new Set();const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)seen.add(e.target.id)});let p=Math.round(seen.size/secs.length*100);document.getElementById('bar').style.width=p+'%';document.getElementById('pt').textContent=p+'% explored'},{threshold:.18});secs.forEach(s=>io.observe(s));
+</script>
+</body></html>
